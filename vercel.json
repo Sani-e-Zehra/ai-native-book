@@ -3,7 +3,6 @@
   "outputDirectory": "build",
   "devCommand": "npm run start",
   "installCommand": "npm install",
-  "framework": null,
-  "nodeVersion": "18.x"
+  "framework": null
 }
 
