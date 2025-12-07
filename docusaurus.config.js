@@ -53,7 +53,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/your-username/ai-humanoid-robotics-course/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Sani-e-Zehra/ai-native-book/tree/main/',
         },
         blog: false, // Disable blog if not needed
         theme: {
@@ -82,7 +82,7 @@ const config = {
             label: 'Course Content',
           },
           {
-            href: 'https://github.com/your-username/ai-humanoid-robotics-course',
+            href: 'https://github.com/Sani-e-Zehra/ai-native-book',
             label: 'GitHub',
             position: 'right',
           },
@@ -130,7 +130,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/Sani-e-Zehra/ai-native-book',
               },
             ],
           },
