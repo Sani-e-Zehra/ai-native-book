@@ -9,14 +9,26 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-username.github.io', // Replace with your project's URL
+  // For Vercel deployment, use environment variable to handle changing domains
+  // VERCEL_URL is automatically provided by Vercel during build (e.g., your-project-abc123.vercel.app)
+  // This ensures CSS and assets load correctly on every deployment, even with changing preview URLs
+  url: (() => {
+    if (process.env.VERCEL_URL) {
+      // VERCEL_URL might already include https:// or might not, handle both cases
+      const url = process.env.VERCEL_URL.startsWith('http') 
+        ? process.env.VERCEL_URL 
+        : `https://${process.env.VERCEL_URL}`;
+      return url;
+    }
+    // Fallback for local development or custom domains
+    return process.env.URL || 'http://localhost:3000';
+  })(),
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // For Vercel deployment, use '/' for root domain
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  organizationName: 'your-username', // Usually your GitHub org/user name.
-  projectName: 'ai-humanoid-robotics-course', // Usually your repo name.
+  
+  // Trailing slash configuration for Vercel
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
