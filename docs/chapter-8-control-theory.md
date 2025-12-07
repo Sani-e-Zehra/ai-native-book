@@ -424,11 +424,11 @@ Dealing with model uncertainty and disturbances:
 #### H∞ Control
 
 Minimizes the worst-case effect of disturbances:
-```math
-||T_{wz}||_∞ = sup_ω σ̄(T_{wz}(jω))
-```
+$$
+\|T_{wz}\|_\infty = \sup_\omega \bar{\sigma}(T_{wz}(j\omega))
+$$
 
-Where T_{wz} is the transfer function from disturbances to errors.
+Where $T_{wz}$ is the transfer function from disturbances to errors.
 
 #### Sliding Mode Control
 
